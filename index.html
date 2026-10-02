@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>English Vision — Official Learning Workspace</title>
+<style>
+:root{--navy:#0b1730;--navy2:#10254a;--blue:#2563eb;--blue2:#eaf2ff;--bg:#f5f7fb;--card:#fff;--text:#172033;--muted:#667085;--line:#e4e8f0;--green:#147d5a;--amber:#a16207;--red:#b42318;--shadow:0 8px 24px rgba(15,23,42,.06)}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text)}button,input,select,textarea{font:inherit}button{cursor:pointer}.app{min-height:100vh;display:flex}.sidebar{width:270px;background:var(--navy);color:#fff;display:flex;flex-direction:column;position:fixed;inset:0 auto 0 0;z-index:20}.brand{padding:22px 20px 18px;border-bottom:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:12px}.logo{width:44px;height:44px;border-radius:9px;background:#fff;color:var(--navy);display:grid;place-items:center;font-weight:800;font-size:13px;overflow:hidden}.logo img{width:100%;height:100%;object-fit:contain}.brand strong{display:block;font-size:17px}.brand small{color:#b8c2d5}.nav{padding:12px 10px;overflow:auto}.nav-section{padding:12px 12px 5px;color:#7f8eaa;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.nav button{width:100%;border:0;background:none;color:#c9d2e3;text-align:left;padding:9px 12px;border-radius:8px;margin:2px 0;display:flex;align-items:center;gap:11px;font-size:13px}.nav button:hover,.nav button.active{background:rgba(255,255,255,.09);color:#fff}.nav svg{width:17px;height:17px;stroke-width:1.8;flex:none}.side-foot{margin-top:auto;padding:15px 20px;border-top:1px solid rgba(255,255,255,.1);font-size:12px;color:#aeb9cc}.main{margin-left:270px;flex:1;min-width:0}.top{height:72px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 30px;position:sticky;top:0;z-index:10}.top h1{font-size:18px;margin:0}.top p{margin:4px 0 0;color:var(--muted);font-size:12px}.actions{display:flex;gap:8px}.btn{border:1px solid var(--line);background:#fff;padding:9px 13px;border-radius:8px;color:var(--text);font-weight:600;font-size:12px}.btn:hover{border-color:#b8c7e5}.btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}.btn.soft{background:var(--blue2);border-color:#d7e5ff;color:#175cd3}.content{padding:28px;max-width:1500px;margin:auto}.page-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:22px}.page-head h2{margin:0;font-size:24px}.page-head p{margin:6px 0;color:var(--muted);font-size:13px}.eyebrow{font-size:10px;font-weight:800;letter-spacing:.08em;color:var(--blue);text-transform:uppercase;margin-bottom:7px}.grid{display:grid;gap:14px}.stats{grid-template-columns:repeat(4,minmax(140px,1fr))}.card{background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow)}.stat{padding:17px}.stat .ico{width:30px;height:30px;border-radius:7px;background:var(--blue2);color:var(--blue);display:grid;place-items:center;margin-bottom:13px}.stat svg{width:16px}.stat b{font-size:23px;display:block}.stat span{font-size:11px;color:var(--muted)}.two{grid-template-columns:1.35fr .65fr;margin-top:18px}.three{grid-template-columns:repeat(3,1fr);margin-top:18px}.panel{padding:20px}.panel h3{font-size:15px;margin:0 0 15px}.list{display:grid;gap:8px}.item{border:1px solid var(--line);border-radius:8px;padding:12px;display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.item strong{font-size:13px}.item small{display:block;color:var(--muted);margin-top:3px}.item-main{display:flex;gap:11px;min-width:0}.item-time{font-size:11px;font-weight:800;color:var(--blue);min-width:42px;padding-top:1px}.check{width:17px;height:17px;accent-color:var(--blue);margin-top:1px}.badge{font-size:10px;padding:4px 7px;border-radius:999px;background:#eef2f7;color:#475467;height:max-content;white-space:nowrap}.badge.green{background:#e7f6ef;color:var(--green)}.badge.blue{background:#eaf2ff;color:#175cd3}.badge.amber{background:#fff4d6;color:var(--amber)}.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:15px}.input{border:1px solid var(--line);background:#fff;border-radius:8px;padding:9px 11px;min-width:190px;outline:none}.input:focus{border-color:#9ab7f8}.quick{display:flex;flex-wrap:wrap;gap:8px}.quick .btn{font-size:11px}.table-wrap{overflow:auto}.table{width:100%;border-collapse:collapse;background:#fff}.table th,.table td{padding:11px 12px;border-bottom:1px solid var(--line);font-size:12px;text-align:left;white-space:nowrap}.table th{color:#667085;background:#fafbfc;font-weight:700}.table td:last-child{text-align:right}.empty{text-align:center;padding:45px;color:var(--muted);font-size:13px}.modal{position:fixed;inset:0;background:rgba(15,23,42,.42);display:none;align-items:center;justify-content:center;padding:20px;z-index:50}.modal.show{display:flex}.modal-box{background:#fff;width:min(680px,100%);max-height:90vh;overflow:auto;border-radius:12px;padding:22px}.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.modal-head h3{margin:0}.x{border:0;background:none;font-size:22px;color:#667085}.form{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:11px;font-weight:700;color:#475467}.field input,.field select,.field textarea{border:1px solid var(--line);border-radius:8px;padding:9px 10px;outline:none}.field textarea{min-height:95px;resize:vertical}.modal-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}.calendar{display:grid;grid-template-columns:repeat(7,1fr);border:1px solid var(--line);border-radius:10px;overflow:hidden}.cal-head,.day{padding:10px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.cal-head{background:#fafbfc;font-size:11px;font-weight:700;color:var(--muted)}.day{min-height:105px;background:#fff}.day.today{background:#f4f8ff}.day b{font-size:12px}.dot{display:block;font-size:10px;padding:3px 5px;background:#eaf2ff;color:#175cd3;border-radius:5px;margin-top:7px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.bars{display:flex;gap:10px;align-items:end;height:180px;padding-top:25px}.bar{flex:1;background:#dbe8ff;border-radius:6px 6px 0 0;position:relative;min-width:30px}.bar span{position:absolute;bottom:100%;font-size:10px;margin-bottom:4px}.notice{padding:12px 14px;border:1px solid #d7e3ff;background:#f5f8ff;border-radius:8px;color:#344054;font-size:12px;margin-bottom:18px}.welcome{display:flex;justify-content:space-between;gap:20px;align-items:flex-end;margin-bottom:20px}.welcome h2{margin:0;font-size:25px}.welcome p{margin:6px 0 0;color:var(--muted);font-size:13px}.date-box{background:#fff;border:1px solid var(--line);border-radius:9px;padding:11px 14px;text-align:right}.date-box strong{display:block;font-size:13px}.date-box span{display:block;color:var(--muted);font-size:11px;margin-top:3px}.section-title{display:flex;justify-content:space-between;align-items:center;margin:22px 0 10px}.section-title h3{font-size:14px;margin:0}.section-title span{font-size:11px;color:var(--muted)}.empty-state{padding:20px;border:1px dashed #cbd5e1;border-radius:8px;color:var(--muted);font-size:12px}.mobile-menu{display:none}.group-label{font-size:10px;font-weight:800;letter-spacing:.08em;color:#667085;text-transform:uppercase;margin:18px 0 8px}.logo-note{font-size:11px;color:var(--muted);line-height:1.5}@media(max-width:1100px){.stats{grid-template-columns:repeat(2,1fr)}.three{grid-template-columns:1fr 1fr}}@media(max-width:800px){.sidebar{transform:translateX(-100%);transition:.2s}.sidebar.open{transform:none}.main{margin-left:0}.mobile-menu{display:block}.top{padding:0 16px}.content{padding:18px}.stats,.two,.three{grid-template-columns:1fr}.form{grid-template-columns:1fr}.field.full{grid-column:auto}.welcome{align-items:flex-start;flex-direction:column}.date-box{text-align:left}.top .actions .btn:first-child{display:none}}@media(max-width:520px){.stats{grid-template-columns:1fr}.top h1{font-size:15px}.top p{display:none}.page-head{gap:10px}.page-head h2{font-size:20px}.top .actions{gap:5px}.top .actions .primary-label{display:none}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><div class="logo" id="logoMark">EV</div><div><strong>English Vision</strong><small>Official Workspace</small></div></div>
+  <nav class="nav" id="nav"></nav>
+  <div class="side-foot">English Vision<br><b>Official Workspace</b></div>
+</aside>
+<main class="main">
+<header class="top"><div style="display:flex;gap:12px;align-items:center"><button class="btn mobile-menu" onclick="toggleSide()" aria-label="Open menu">Menu</button><div><h1 id="topTitle">English Vision Official Workspace</h1><p>Learn. Create. Organize. Grow. — English Vision.</p></div></div><div class="actions"><button class="btn" onclick="go('settings')">Settings</button><button class="btn primary" onclick="openCreate('projects')">+ New Project</button></div></header>
+<section class="content" id="view"></section>
+</main></div>
+<div class="modal" id="modal"><div class="modal-box"><div class="modal-head"><h3 id="modalTitle">Add Content</h3><button class="x" onclick="closeModal()" aria-label="Close">×</button></div><div id="modalBody"></div></div></div>
+<script>
+const navGroups=[
+ ['MAIN',[['dashboard','Dashboard','grid'],['today','Today','calendar']]],
+ ['ENGLISH VISION',[['projects','Projects','layers'],['facebook','Facebook Content','facebook'],['ideas','Content Ideas','bulb'],['brand','Brand Assets','shield']]],
+ ['ORGANIZE',[['calendar','Calendar','calendar'],['library','Content Library','search']]],
+ ['INSIGHTS',[['statistics','Statistics','chart']]],
+ ['SYSTEM',[['settings','Settings','settings']]]
+];
+const icons={grid:'M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z',calendar:'M7 3v3m10-3v3M4 8h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1',book:'M4 5a3 3 0 0 1 3-2h13v16H7a3 3 0 0 0-3 3zM4 5v17',type:'M4 5h16M10 5v14M7 19h6',message:'M4 5h16v11H8l-4 4z',layers:'M4 7l8-4 8 4-8 4zM4 12l8 4 8-4M4 17l8 4 8-4',mic:'M12 3a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3zM5 11a7 7 0 0 0 14 0M12 18v3M8 21h8',shield:'M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z',edit:'M4 20h4L19 9l-4-4L4 16zM13 6l4 4',flag:'M5 21V4m0 1h12l-2 4 2 4H5',target:'M12 3a9 9 0 1 0 9 9M12 7a5 5 0 1 0 5 5M12 11a1 1 0 1 0 1 1',check:'M5 4h14v16H5zM8 12l3 3 5-6',clipboard:'M8 5h8v3H8zM6 5H4v16h16V5h-2M8 12h8M8 16h6',facebook:'M15 3h4v4h-4v4h4v4h-4v6h-4v-6H8v-4h3V7a4 4 0 0 1 4-4',bulb:'M9 18h6M10 21h4M8 14a6 6 0 1 1 8 0c-1 1-2 2-2 4h-4c0-2-1-3-2-4',search:'M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16M21 21l-4.3-4.3',chart:'M5 20V10m7 10V4m7 16v-7',settings:'M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-1.7 1.7-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6v.2h-2.4v-.2a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1L8 17l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H6.6v-2.4h.2a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L8 8.6l1.7-1.7.1.1a1.7 1.7 0 0 0 1.9.3 1.7 1.7 0 0 0 1-1.6v-.2h2.4v.2a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1 1.7 1.7-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1z'};
+function ico(k){return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="${icons[k]||icons.grid}"/></svg>`}
+function nav(){document.getElementById('nav').innerHTML=navGroups.map(([g,items])=>`<div class="nav-section">${g}</div>${items.map(([id,label,icon])=>`<button data-nav="${id}" onclick="go('${id}')">${ico(icon)}<span>${label}</span></button>`).join('')}`).join('')}
+const sections={
+ projects:{title:'Projects',fields:['Project Name','Description','Client/Brand','Status','Priority','Start Date','Due Date','Notes']},
+ facebook:{title:'Facebook Content',fields:['Content Title','Content Type','Caption','Topic','Media Note','Scheduled Date','Status']},
+ ideas:{title:'Content Ideas',fields:['Idea','Category','Platform','Notes','Priority','Status']},
+ brand:{title:'Brand Assets',fields:['Asset Name','Asset Type','Description','File/Link','Status','Notes']},
+ tasks:{title:'Tasks',fields:['Task Title','Description','Priority','Status','Due Date','Notes']}
+};
+const defaults={projects:[],facebook:[],ideas:[],brand:[],tasks:[],calendar:[]};
+let data=JSON.parse(localStorage.getItem('evData')||'null')||defaults;Object.keys(defaults).forEach(k=>{if(!Array.isArray(data[k]))data[k]=[]});let current='dashboard',editIndex=null;
+function save(){localStorage.setItem('evData',JSON.stringify(data))}
+function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function go(id){current=id;document.querySelectorAll('[data-nav]').forEach(b=>b.classList.toggle('active',b.dataset.nav===id));document.getElementById('topTitle').textContent=id==='dashboard'?'English Vision Official Workspace':id==='today'?'Today':(sections[id]?.title||id[0].toUpperCase()+id.slice(1));render();document.getElementById('sidebar').classList.remove('open')}
+function toggleSide(){document.getElementById('sidebar').classList.toggle('open')}
+function todayStr(){return new Date().toISOString().slice(0,10)}
+function prettyDate(d=new Date()){return d.toLocaleDateString(undefined,{weekday:'long',year:'numeric',month:'long',day:'numeric'})}
+function countAll(){return Object.keys(sections).reduce((n,k)=>n+data[k].length,0)}
+function statusCount(status){return Object.keys(sections).reduce((n,k)=>n+data[k].filter(x=>x.Status===status).length,0)}
+function dashboard(){let d=new Date(), pending=data.tasks.filter(x=>x.status!=='Done').length;let scheduled=statusCount('Scheduled'),drafts=statusCount('Draft'),ready=statusCount('Ready');return `<div class="welcome"><div><div class="eyebrow">English Vision Official Workspace</div><h2>Welcome to English Vision</h2><p>The official workspace for managing English Vision's content, projects and digital work.</p></div><div class="date-box"><strong>${prettyDate(d)}</strong><span>Today</span></div></div><div class="grid stats">${[['Today’s Tasks',String(pending).padStart(2,'0'),'clipboard'],['Scheduled',String(scheduled).padStart(2,'0'),'calendar'],['Drafts',String(drafts).padStart(2,'0'),'edit'],['Ready',String(ready).padStart(2,'0'),'check']].map(s=>`<div class="card stat"><div class="ico">${ico(s[2])}</div><b>${s[1]}</b><span>${s[0]}</span></div>`).join('')}</div><div class="section-title"><h3>Today’s Work</h3><span>Chronological workspace</span></div><div class="card panel">${todayTimeline()}</div><div class="section-title"><h3>Quick Actions</h3><span>Start new work</span></div><div class="quick">${[['New Project','projects'],['New Facebook Post','facebook'],['New Content Idea','ideas'],['New Brand Asset','brand'],['New Task','tasks']].map(x=>`<button class="btn" onclick="openCreate('${x[1]}')">+ ${x[0]}</button>`).join('')}</div><div class="grid two"><div><div class="section-title"><h3>Recent Work</h3><span>${countAll()} total items</span></div><div class="card panel"><div class="list">${recentItems()}</div></div></div><div><div class="section-title"><h3>Upcoming Work</h3><span>Planned work</span></div><div class="card panel"><div class="list">${upcoming()}</div></div></div></div>`}
+function todayTimeline(){let tasks=data.tasks.filter(x=>x.date===todayStr()).sort((a,b)=>(a.time||'').localeCompare(b.time||''));if(!tasks.length)return `<div class="empty-state">No tasks added for today yet. Use Quick Actions or Today to add your work.</div>`;return `<div class="list">${tasks.map((x,i)=>`<div class="item"><div class="item-main"><input class="check" type="checkbox" ${x.status==='Done'?'checked':''} onchange="toggleTask(${data.tasks.indexOf(x)})"><span class="item-time">${esc(x.time||'--:--')}</span><div><strong>${esc(x.title)}</strong><small>${esc(x.type||'Task')}</small></div></div><span class="badge ${x.status==='Done'?'green':x.status==='In Progress'?'blue':'amber'}">${esc(x.status||'To Do')}</span></div>`).join('')}</div>`}
+function recentItems(){let arr=[];Object.entries(sections).forEach(([k,s])=>data[k].slice(-2).forEach((x,i)=>arr.push({title:x[s.fields[0]]||s.title,type:s.title,status:x.Status||'Draft',stamp:i})));arr=arr.slice(-6).reverse();return arr.length?arr.map(x=>`<div class="item"><div><strong>${esc(x.title)}</strong><small>${esc(x.type)}</small></div><span class="badge ${x.status==='Published'?'green':x.status==='Scheduled'?'blue':'amber'}">${esc(x.status)}</span></div>`).join(''):'<div class="empty">No content yet. Start with a Quick Action.</div>'}
+function upcoming(){let items=[];Object.entries(sections).forEach(([k,s])=>data[k].forEach(x=>{let date=x.Date||x['Scheduled Date']||x['Due Date'];if(date&&date>=todayStr())items.push({title:x[s.fields[0]]||s.title,type:s.title,date,status:x.Status||'Scheduled'})}));items.sort((a,b)=>a.date.localeCompare(b.date));items=items.slice(0,5);return items.length?items.map(x=>`<div class="item"><div><strong>${esc(x.title)}</strong><small>${esc(x.type)} · ${esc(x.date)}</small></div><span class="badge blue">${esc(x.status)}</span></div>`).join(''):'<div class="empty">No upcoming scheduled content.</div>'}
+function todayPage(){let tasks=data.tasks.filter(x=>x.date===todayStr()).sort((a,b)=>(a.time||'').localeCompare(b.time||''));return `<div class="page-head"><div><div class="eyebrow">Today</div><h2>Today’s Work</h2><p>Everything English Vision needs to manage today, in one place.</p></div><button class="btn primary" onclick="openTask()">+ Add Task</button></div><div class="card panel">${tasks.length?`<div class="list">${tasks.map((x,i)=>`<div class="item"><div class="item-main"><input class="check" type="checkbox" ${x.status==='Done'?'checked':''} onchange="toggleTask(${data.tasks.indexOf(x)})"><span class="item-time">${esc(x.time||'--:--')}</span><div><strong>${esc(x.title)}</strong><small>${esc(x.type||'Task')}</small></div></div><div><span class="badge ${x.status==='Done'?'green':x.status==='In Progress'?'blue':'amber'}">${esc(x.status||'To Do')}</span> <button class="btn" onclick="editTask(${data.tasks.indexOf(x)})">Edit</button></div></div>`).join('')}</div>`:'<div class="empty-state">No work planned for today.</div>'}</div>`}
+function contentPage(k){let s=sections[k];return `<div class="page-head"><div><div class="eyebrow">Content Management</div><h2>${s.title}</h2><p>Manage and organize English Vision's ${s.title.toLowerCase()}.</p></div><button class="btn primary" onclick="openCreate('${k}')">+ Add ${s.title.replace('Daily ','')}</button></div><div class="card panel"><div class="toolbar"><input class="input" id="search" placeholder="Search ${s.title.toLowerCase()}..." oninput="drawTable('${k}')"><select class="input" id="filter" onchange="drawTable('${k}')"><option value="">All Status</option><option>Draft</option><option>Scheduled</option><option>Published</option><option>Completed</option><option>Ready</option><option>Idea</option><option>New</option><option>Working</option><option>Used</option></select></div><div class="table-wrap" id="table"></div></div>`}
+function drawTable(k){let s=sections[k],q=(document.getElementById('search')?.value||'').toLowerCase(),f=document.getElementById('filter')?.value||'',rows=data[k].map((x,i)=>({x,i})).filter(r=>JSON.stringify(r.x).toLowerCase().includes(q)&&(!f||r.x.Status===f));document.getElementById('table').innerHTML=rows.length?`<table class="table"><thead><tr>${s.fields.slice(0,5).map(f=>`<th>${f}</th>`).join('')}<th>Actions</th></tr></thead><tbody>${rows.map(r=>`<tr>${s.fields.slice(0,5).map(f=>`<td>${esc(r.x[f]??'')}</td>`).join('')}<td><button class="btn" onclick="editItem('${k}',${r.i})">Edit</button> <button class="btn" onclick="duplicateItem('${k}',${r.i})">Duplicate</button> <button class="btn" onclick="delItem('${k}',${r.i})">Delete</button></td></tr>`).join('')}</tbody></table>`:'<div class="empty">No matching content found.</div>'}
+function openCreate(k){k=k||'vocabulary';editIndex=null;showModal(k)}
+function editItem(k,i){editIndex=i;showModal(k)}
+function duplicateItem(k,i){data[k].push({...data[k][i]});save();render()}
+function showModal(k){let s=sections[k],old=editIndex==null?{}:data[k][editIndex];document.getElementById('modalTitle').textContent=(editIndex==null?'Add ':'Edit ')+s.title;document.getElementById('modalBody').innerHTML=`<form class="form" onsubmit="event.preventDefault();saveItem('${k}')">${s.fields.map((f,i)=>`<div class="field ${i===1||/Description|Content|Instructions|Caption|Tips|Notes|Context|Example|Options|Practice|Activity/.test(f)?'full':''}"><label>${f}</label>${/Status|Difficulty|Level|Platform|Priority|Content Type|Part of Speech|Category/.test(f)?`<select id="f${i}"><option value="">Select ${f}</option>${['Draft','Scheduled','Published','Completed','Ready','Idea','New','Working','Used','Easy','Medium','Hard','Beginner','Intermediate','Advanced','Facebook','Instagram','YouTube','Reels','Shorts','Educational Post','Vocabulary','English Tip','Speaking Tip','Confidence','Leadership','Daily Challenge','Video','Reel','Noun','Verb','Adjective','Adverb'].map(v=>`<option ${old[f]===v?'selected':''}>${v}</option>`).join('')}</select>`:/Options|Lesson Content|Introduction|Examples|Practice|Description|Instructions|Caption|Tips|Notes|Example\/Context|Activity/.test(f)?`<textarea id="f${i}">${esc(old[f]||'')}</textarea>`:`<input id="f${i}" type="${/Date|Due Date|Scheduled Date/.test(f)?'date':'text'}" value="${esc(old[f]||'')}">`}</div>`).join('')}<div class="field full"><div class="modal-actions"><button type="button" class="btn" onclick="closeModal()">Cancel</button><button class="btn primary">Save</button></div></div></form>`;document.getElementById('modal').classList.add('show')}
+function saveItem(k){let s=sections[k],o={};s.fields.forEach((f,i)=>o[f]=document.getElementById('f'+i).value.trim());if(editIndex==null)data[k].push(o);else data[k][editIndex]=o;save();closeModal();render()}
+function delItem(k,i){if(confirm('Delete this item?')){data[k].splice(i,1);save();render()}}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+function openTask(index=null){editIndex=index;let old=index==null?{}:data.tasks[index];document.getElementById('modalTitle').textContent=index==null?'Add Task':'Edit Task';document.getElementById('modalBody').innerHTML=`<form class="form" onsubmit="event.preventDefault();saveTask()"><div class="field"><label>Time</label><input id="taskTime" type="time" value="${esc(old.time||'09:00')}"></div><div class="field"><label>Date</label><input id="taskDate" type="date" value="${esc(old.date||todayStr())}"></div><div class="field full"><label>Title</label><input id="taskTitle" value="${esc(old.title||'')}"></div><div class="field"><label>Type</label><input id="taskType" value="${esc(old.type||'Task')}"></div><div class="field"><label>Status</label><select id="taskStatus">${['To Do','In Progress','Done'].map(v=>`<option ${old.status===v?'selected':''}>${v}</option>`).join('')}</select></div><div class="field full"><div class="modal-actions"><button type="button" class="btn" onclick="closeModal()">Cancel</button><button class="btn primary">Save Task</button></div></div></form>`;document.getElementById('modal').classList.add('show')}
+function saveTask(){let o={time:document.getElementById('taskTime').value,date:document.getElementById('taskDate').value,title:document.getElementById('taskTitle').value.trim(),type:document.getElementById('taskType').value.trim(),status:document.getElementById('taskStatus').value};if(!o.title)return;if(editIndex==null)data.tasks.push(o);else data.tasks[editIndex]=o;save();closeModal();render()}
+function editTask(i){openTask(i)}function toggleTask(i){data.tasks[i].status=data.tasks[i].status==='Done'?'To Do':'Done';save();render()}
+function calendar(){let now=new Date(),y=now.getFullYear(),m=now.getMonth(),first=new Date(y,m,1).getDay(),days=new Date(y,m+1,0).getDate(),cells='';for(let i=0;i<first;i++)cells+='<div class="day"></div>';for(let d=1;d<=days;d++){let date=`${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`,events=[];Object.entries(sections).forEach(([k,s])=>data[k].forEach(x=>{if(s.fields.some(f=>/Date|Due Date|Scheduled Date/.test(f)&&x[f]===date))events.push(s.title)}));let taskCount=data.tasks.filter(x=>x.date===date).length; if(taskCount)events.unshift(`${taskCount} task${taskCount>1?'s':''}`);cells+=`<div class="day ${date===todayStr()?'today':''}"><b>${d}</b>${events.slice(0,3).map(e=>`<span class="dot">${esc(e)}</span>`).join('')}</div>`}return `<div class="page-head"><div><div class="eyebrow">Organize</div><h2>Calendar</h2><p>Plan projects, content, tasks and scheduled activities.</p></div><button class="btn primary" onclick="openCreate('projects')">+ Add Project</button></div><div class="card" style="overflow:hidden"><div class="calendar"><div class="cal-head">Sun</div><div class="cal-head">Mon</div><div class="cal-head">Tue</div><div class="cal-head">Wed</div><div class="cal-head">Thu</div><div class="cal-head">Fri</div><div class="cal-head">Sat</div>${cells}</div></div>`}
+function library(){return `<div class="page-head"><div><div class="eyebrow">Organize</div><h2>Content Library</h2><p>Search and manage all English Vision work in one place.</p></div></div><div class="card panel"><div class="toolbar"><input class="input" style="flex:1" placeholder="Search all content..." oninput="filterLibrary(this.value)"><select class="input" onchange="filterLibrary(document.querySelector('#libSearch')?.value||'',this.value)" id="libType"><option value="">All Content Types</option>${Object.values(sections).map(s=>`<option>${s.title}</option>`).join('')}</select></div><div id="lib"></div></div>`}
+function filterLibrary(q='',type=''){let items=[];Object.entries(sections).forEach(([k,s])=>data[k].forEach((x,i)=>items.push({k,i,title:x[s.fields[0]]||s.title,type:s.title,status:x.Status||'Draft',date:x.Date||x['Scheduled Date']||x['Due Date']||'',category:x.Category||''})));let a=items.filter(x=>JSON.stringify(x).toLowerCase().includes(q.toLowerCase())&&(!type||x.type===type));let el=document.getElementById('lib');if(!el)return;el.innerHTML=a.length?'<div class="list">'+a.map(x=>`<div class="item"><div><strong>${esc(x.title)}</strong><small>${esc(x.type)} · ${esc(x.date)}${x.category?' · '+esc(x.category):''}</small></div><span class="badge blue">${esc(x.status)}</span></div>`).join('')+'</div>':'<div class="empty">No content found.</div>'}
+function stats(){let vals=Object.entries(sections).map(([k,s])=>[s.title,data[k].length]),max=Math.max(1,...vals.map(x=>x[1]));return `<div class="page-head"><div><div class="eyebrow">Insights</div><h2>Statistics</h2><p>A practical overview of English Vision's work.</p></div></div><div class="grid stats"><div class="card stat"><div class="ico">${ico('layers')}</div><b>${countAll()}</b><span>Total Content</span></div><div class="card stat"><div class="ico">${ico('check')}</div><b>${statusCount('Published')}</b><span>Published Content</span></div><div class="card stat"><div class="ico">${ico('edit')}</div><b>${statusCount('Draft')}</b><span>Draft Content</span></div><div class="card stat"><div class="ico">${ico('calendar')}</div><b>${statusCount('Scheduled')}</b><span>Scheduled Content</span></div></div><div class="card panel" style="margin-top:18px"><h3>Content Distribution</h3><div class="bars">${vals.map(x=>`<div class="bar" style="height:${Math.max(8,x[1]/max*135)}px"><span>${x[1]}</span></div>`).join('')}</div><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px">${vals.map(x=>`<div class="item"><strong>${esc(x[0])}</strong><b>${x[1]}</b></div>`).join('')}</div></div>`}
+function settings(){return `<div class="page-head"><div><div class="eyebrow">System</div><h2>Settings</h2><p>Workspace and brand settings.</p></div></div><div class="grid two"><div class="card panel"><h3>English Vision Brand</h3><div class="notice">Use the official English Vision logo here. The application does not generate or redesign your logo.</div><input class="input" type="file" accept="image/*" onchange="setLogo(this)"><p class="logo-note">The selected logo is stored locally in this browser and will appear in the sidebar. Upload the original logo file to use it.</p></div><div class="card panel"><h3>Data Management</h3><p class="logo-note">Back up your workspace before changing devices or clearing browser data.</p><button class="btn" onclick="exportData()">Export Data</button> <button class="btn" onclick="importData()">Import Data</button> <button class="btn" onclick="resetData()">Reset Demo Data</button></div></div>`}
+function render(){let html=current==='dashboard'?dashboard():current==='today'?todayPage():current==='calendar'?calendar():current==='library'?library():current==='statistics'?stats():current==='settings'?settings():sections[current]?contentPage(current):dashboard();document.getElementById('view').innerHTML=html;if(sections[current])drawTable(current);if(current==='library')filterLibrary('')}
+function setLogo(input){let f=input.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{localStorage.setItem('evLogo',r.result);applyLogo(r.result)};r.readAsDataURL(f)}
+function applyLogo(src){document.getElementById('logoMark').innerHTML=`<img src="${src}" alt="English Vision official logo">`}
+function exportData(){let payload={...data,settings:{logo:localStorage.getItem('evLogo')||null,exportedAt:new Date().toISOString()}};let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}));a.download='english-vision-workspace.json';a.click();URL.revokeObjectURL(a.href)}
+function importData(){let i=document.createElement('input');i.type='file';i.accept='.json';i.onchange=()=>{let r=new FileReader();r.onload=()=>{try{let imported=JSON.parse(r.result);if(imported.settings?.logo){localStorage.setItem('evLogo',imported.settings.logo)}delete imported.settings;data={...defaults,...imported};save();location.reload()}catch(e){alert('Invalid workspace backup file')}};r.readAsText(i.files[0])};i.click()}
+function resetData(){if(confirm('Reset all local workspace data?')){localStorage.removeItem('evData');location.reload()}}
+function openSettings(){go('settings')}
+nav();go('dashboard');const logo=localStorage.getItem('evLogo');if(logo)applyLogo(logo);
+</script>
+<style>
+/* English Vision learning workspace enhancement */
+.ev-learning-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0}
+.ev-card{background:var(--card,#fff);border:1px solid rgba(0,0,0,.08);border-radius:14px;padding:16px}
+.ev-card h3{margin:0 0 7px;font-size:16px}.ev-card p{margin:0;color:#667085;font-size:13px}
+.ev-stat{font-size:26px;font-weight:700;margin-top:8px}
+.ev-toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.ev-toolbar button,.ev-toolbar input,.ev-toolbar select{padding:9px 11px;border-radius:9px;border:1px solid #d9dee8;background:#fff}
+.ev-toolbar button{cursor:pointer;font-weight:600}
+.ev-table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden}
+.ev-table th,.ev-table td{padding:10px;border-bottom:1px solid #edf0f5;text-align:left;font-size:13px;vertical-align:top}
+.ev-table th{background:#f7f8fb}
+.ev-empty{padding:25px;text-align:center;color:#98a2b3}
+.ev-pill{display:inline-block;padding:3px 8px;border-radius:99px;background:#eef4ff;color:#2457c5;font-size:11px;font-weight:600}
+.ev-modal{position:fixed;inset:0;background:rgba(15,23,42,.45);display:none;align-items:center;justify-content:center;z-index:9999;padding:20px}
+.ev-modal.open{display:flex}.ev-modal-box{background:#fff;width:min(760px,96vw);max-height:90vh;overflow:auto;border-radius:16px;padding:22px}
+.ev-form{display:grid;grid-template-columns:1fr 1fr;gap:12px}.ev-form .full{grid-column:1/-1}
+.ev-form label{font-size:12px;font-weight:600;color:#475467}.ev-form input,.ev-form textarea,.ev-form select{width:100%;box-sizing:border-box;margin-top:5px;padding:10px;border:1px solid #d0d5dd;border-radius:9px}
+.ev-form textarea{min-height:90px;resize:vertical}.ev-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:16px}
+.ev-actions button{padding:10px 15px;border:0;border-radius:9px;cursor:pointer}
+@media(max-width:650px){.ev-form{grid-template-columns:1fr}.ev-form .full{grid-column:auto}}
+</style>
+
+<script>
+(function(){
+  const KEY='evLearningData';
+  const defaultData={wordMeanings:[],vocabulary:[],sentences:[],presentations:[],images:[],videos:[],schedules:[]};
+  let db=JSON.parse(localStorage.getItem(KEY)||'null')||defaultData;
+  Object.keys(defaultData).forEach(k=>{if(!Array.isArray(db[k]))db[k]=[]});
+  function save(){localStorage.setItem(KEY,JSON.stringify(db));renderAll();}
+  function esc(v){return String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));}
+  function add(type,obj){db[type].push({id:Date.now()+Math.random(),created:new Date().toISOString(),...obj});save();}
+  function del(type,id){db[type]=db[type].filter(x=>String(x.id)!==String(id));save();}
+  function openModal(type){
+    const labels={wordMeanings:['Word Meaning','Word','Meaning','Example Sentence','Part of Speech'],
+      vocabulary:['Vocabulary','Word','Meaning','Pronunciation','Example'],
+      sentences:['Sentence','Sentence','Meaning','Grammar/Topic','Notes'],
+      presentations:['Presentation','Title','Content','Topic','Notes'],
+      images:['Image','Image Name','Image URL / File Name','Category','Notes'],
+      videos:['Video','Video Title','Video URL / File Name','Category','Notes'],
+      schedules:['Schedule','Title','Date','Time','Type']};
+    const a=labels[type]; if(!a)return;
+    const fields= type==='schedules'
+      ? `<div><label>${a[2]}<input id="evf2" type="date"></label></div><div><label>${a[3]}<input id="evf3" type="time"></label></div><div><label>${a[4]}<select id="evf4"><option>Study</option><option>Content</option><option>Presentation</option><option>Revision</option><option>Other</option></select></label></div>`
+      : `<div><label>${a[2]}<textarea id="evf2"></textarea></label></div><div><label>${a[3]}<input id="evf3"></label></div><div><label>${a[4]}<textarea id="evf4"></textarea></label></div>`;
+    document.getElementById('evModal').innerHTML=`<div class="ev-modal-box"><h2>Add ${a[0]}</h2>
+      <div class="ev-form"><div><label>${a[1]}<input id="evf1"></label></div>${fields}
+      <div class="full"><label>Notes<textarea id="evfn"></textarea></label></div></div>
+      <div class="ev-actions"><button onclick="closeEvModal()">Cancel</button><button onclick="submitEv('${type}')">Save</button></div></div>`;
+    document.getElementById('evModal').classList.add('open');
+  }
+  window.closeEvModal=()=>document.getElementById('evModal').classList.remove('open');
+  window.submitEv=function(type){
+    const g=id=>document.getElementById(id)?.value.trim()||'';
+    if(!g('evf1'))return;
+    if(type==='schedules') add(type,{title:g('evf1'),date:g('evf2'),time:g('evf3'),type:g('evf4'),notes:g('evfn')});
+    else add(type,{title:g('evf1'),value:g('evf2'),category:g('evf3'),extra:g('evf4'),notes:g('evfn')});
+    closeEvModal();
+  };
+  window.openEvModal=openModal;
+  window.deleteEv=(type,id)=>del(type,id);
+
+  function section(title,type,buttonText){
+    const items=db[type];
+    return `<div class="ev-card"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
+      <h3>${title}</h3><button onclick="openEvModal('${type}')">+ ${buttonText}</button></div>
+      <div class="ev-toolbar"><input placeholder="Search ${title.toLowerCase()}..." oninput="filterEv('${type}',this.value)"></div>
+      <div id="evlist-${type}">${table(type,items)}</div></div>`;
+  }
+  function table(type,items){
+    if(!items.length)return '<div class="ev-empty">No saved items yet.</div>';
+    return `<table class="ev-table"><thead><tr><th>Main</th><th>Details</th><th>Extra</th><th></th></tr></thead><tbody>`+
+      items.slice().reverse().map(x=>`<tr><td><b>${esc(x.title)}</b></td><td>${esc(x.value||x.date||'')}<br><span class="ev-pill">${esc(x.category||x.type||'')}</span></td><td>${esc(x.extra||x.time||x.notes||'')}</td><td><button onclick="deleteEv('${type}','${x.id}')">Delete</button></td></tr>`).join('')+
+      `</tbody></table>`;
+  }
+  window.filterEv=(type,q)=>{
+    const arr=db[type].filter(x=>JSON.stringify(x).toLowerCase().includes(q.toLowerCase()));
+    document.getElementById('evlist-'+type).innerHTML=table(type,arr);
+  };
+
+  function render(){
+    const host=document.getElementById('evLearningWorkspace');
+    if(!host)return;
+    const total=Object.values(db).reduce((s,a)=>s+a.length,0);
+    const today=new Date().toISOString().slice(0,10);
+    const todayWords=db.wordMeanings.filter(x=>x.created?.slice(0,10)===today).length;
+    host.innerHTML=`<h2>English Learning Hub</h2>
+      <p style="color:#667085">Store and manage your English learning materials, daily vocabulary, presentations, media and schedules in one official workspace.</p>
+      <div class="ev-learning-grid">
+        <div class="ev-card"><p>Today's Word Meanings</p><div class="ev-stat">${todayWords}</div></div>
+        <div class="ev-card"><p>Total Word Meanings</p><div class="ev-stat">${db.wordMeanings.length}</div></div>
+        <div class="ev-card"><p>Vocabulary</p><div class="ev-stat">${db.vocabulary.length}</div></div>
+        <div class="ev-card"><p>Saved Materials</p><div class="ev-stat">${total}</div></div>
+      </div>
+      ${section('Word Meaning','wordMeanings','Add Word')}
+      ${section('Vocabulary','vocabulary','Add Vocabulary')}
+      ${section('Sentence Collection','sentences','Add Sentence')}
+      ${section('Presentation Notes','presentations','Add Presentation')}
+      ${section('Image Folder','images','Add Image')}
+      ${section('Video Library','videos','Add Video')}
+      ${section('Schedule','schedules','Add Schedule')}`;
+  }
+  window.renderAll=render;
+  function mount(){
+    if(document.getElementById('evLearningWorkspace'))return;
+    const main=document.querySelector('main')||document.body;
+    const wrap=document.createElement('section'); wrap.id='evLearningWorkspace'; wrap.style.marginTop='24px';
+    main.appendChild(wrap);
+    const modal=document.createElement('div'); modal.id='evModal'; modal.className='ev-modal';
+    modal.addEventListener('click',e=>{if(e.target===modal)closeEvModal()});
+    document.body.appendChild(modal); render();
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount);else mount();
+})();
+</script>
+
+
+<style>
+.ev-live-datebar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  padding:14px 16px;margin:0 0 18px;border:1px solid rgba(0,0,0,.08);border-radius:14px;background:#fff}
+.ev-live-datebar strong{font-size:17px}.ev-live-datebar span{color:#667085;font-size:13px}
+.ev-cal-nav{display:flex;gap:6px;align-items:center}.ev-cal-nav button{padding:7px 10px;border:1px solid #d9dee8;background:#fff;border-radius:8px;cursor:pointer}
+.ev-cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:12px}
+.ev-cal-head{font-size:11px;font-weight:700;text-align:center;color:#667085;padding:6px}
+.ev-cal-day{min-height:72px;border:1px solid #edf0f5;border-radius:10px;background:#fff;padding:7px;cursor:pointer}
+.ev-cal-day:hover{border-color:#98a2b3}.ev-cal-day.muted{opacity:.45}.ev-cal-day.today{outline:2px solid #2563eb}
+.ev-cal-day .num{font-weight:700}.ev-cal-day .event{font-size:10px;margin-top:5px;padding:3px 5px;border-radius:6px;background:#eef4ff;color:#2457c5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+</style>
+<script>
+(function(){
+  function liveDate(){
+    const now=new Date();
+    const fmt=new Intl.DateTimeFormat('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});
+    document.querySelectorAll('[data-live-date]').forEach(el=>el.textContent=fmt.format(now));
+    document.querySelectorAll('[data-live-short]').forEach(el=>el.textContent=now.toISOString().slice(0,10));
+  }
+
+  function calendar(){
+    const host=document.getElementById('evDynamicCalendar');
+    if(!host)return;
+    let shown=window.__evCalDate||new Date();
+    window.__evCalDate=shown;
+    const y=shown.getFullYear(), m=shown.getMonth();
+    const monthName=new Intl.DateTimeFormat('en-US',{month:'long',year:'numeric'}).format(shown);
+    const first=new Date(y,m,1), start=(first.getDay());
+    const days=new Date(y,m+1,0).getDate();
+    const prevDays=new Date(y,m,0).getDate();
+    const today=new Date(); today.setHours(0,0,0,0);
+    let cells='';
+    const data=JSON.parse(localStorage.getItem('evLearningData')||'{}');
+    const schedules=Array.isArray(data.schedules)?data.schedules:[];
+    const tasks=Array.isArray(data.tasks)?data.tasks:[];
+    const all=schedules.concat(tasks);
+
+    for(let i=0;i<42;i++){
+      const dayNum=i-start+1;
+      let d, muted=false;
+      if(dayNum<1){d=new Date(y,m-1,prevDays+dayNum);muted=true}
+      else if(dayNum>days){d=new Date(y,m+1,dayNum-days);muted=true}
+      else d=new Date(y,m,dayNum);
+      const iso=d.toISOString().slice(0,10);
+      const isToday=d.getTime()===today.getTime();
+      const ev=all.filter(x=>(x.date||x.dueDate||'')===iso).slice(0,2);
+      cells+=`<div class="ev-cal-day ${muted?'muted':''} ${isToday?'today':''}" onclick="evCalendarDate('${iso}')">
+        <div class="num">${d.getDate()}</div>${ev.map(e=>`<div class="event">${String(e.title||e.name||'').replace(/[<>&"]/g,'')}</div>`).join('')}</div>`;
+    }
+
+    host.innerHTML=`<div class="ev-live-datebar">
+      <div><strong>Today: <span data-live-date></span></strong><br><span>Your workspace date updates automatically every day.</span></div>
+      <div class="ev-cal-nav"><button onclick="evCalPrev()">‹</button><b>${monthName}</b><button onclick="evCalNext()">›</button><button onclick="evCalToday()">Today</button></div>
+    </div>
+    <div class="ev-cal-grid">${['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(x=>`<div class="ev-cal-head">${x}</div>`).join('')}${cells}</div>`;
+    liveDate();
+  }
+
+  window.evCalPrev=function(){const d=window.__evCalDate||new Date();window.__evCalDate=new Date(d.getFullYear(),d.getMonth()-1,1);calendar()};
+  window.evCalNext=function(){const d=window.__evCalDate||new Date();window.__evCalDate=new Date(d.getFullYear(),d.getMonth()+1,1);calendar()};
+  window.evCalToday=function(){window.__evCalDate=new Date();calendar()};
+  window.evCalendarDate=function(iso){
+    const data=JSON.parse(localStorage.getItem('evLearningData')||'{}');
+    const items=[...(data.schedules||[]),...(data.tasks||[])].filter(x=>(x.date||x.dueDate||'')===iso);
+    if(items.length) alert(iso+'\\n\\n'+items.map(x=>x.title||x.name||'Untitled').join('\\n'));
+  };
+
+  function mountCalendar(){
+    if(!document.getElementById('evDynamicCalendar')){
+      const target=document.getElementById('evLearningWorkspace');
+      if(target){
+        const s=document.createElement('section');
+        s.className='ev-card';
+        s.style.marginBottom='18px';
+        s.innerHTML='<h2>Live Calendar</h2><div id="evDynamicCalendar"></div>';
+        target.prepend(s);
+      }
+    }
+    calendar();
+    setInterval(()=>{liveDate();calendar()},60000);
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mountCalendar);else mountCalendar();
+})();
+</script>
+
+</body></html>
